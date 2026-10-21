@@ -1,0 +1,22 @@
+#include <msp430.h>
+
+unsigned int grados = 0;
+
+int main(void)
+{
+    WDTCTL = WDTPW | WDTHOLD;  // Detener watchdog
+    adc_init();
+
+    __bis_SR_register(GIE); // Habilitar interrupciones globales
+
+    while (1)
+    {
+        if (nuevaLectura)
+        {
+            nuevaLectura = 0;
+
+            grados = ((unsigned long)lecturaADC * 270) / 1023;
+
+        }
+    }
+}

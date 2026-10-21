@@ -1,0 +1,57 @@
+/*
+ * adc.c
+ *
+ *  Created on: 21/10/2026
+ *      Author: Julia y Dania
+ */
+#include <msp430.h>
+#include "adc.h"
+
+volatile unsigned int lecturaADC = 0;
+volatile unsigned char nuevaLectura = 0;
+
+void adc_init(void)
+{
+    // Inicializar reloj, se usa el TA1 debido al uso del TA0 para funciones de espera del resto del programa
+    TA1CCTL0 = CCIE;
+    // TASSEL_2 : Fuente del reloj SMCLK (aprox. 1Mhz por defecto)
+    // ID_3 : Divisor de frecuencia /8 (reloj del timer =~125 Khz)
+    // MC_1 : Modo "Up" (cuenta de 0 hasta TACCR0)
+    // TACLR : Limpiar el contador del timer
+
+    TA1CTL = TASSEL_2 | ID_3 | MC_1 |TAIE| TACLR;
+
+    // Establecer el valor limite de conteo
+    // Frecuencia = 125000 hz. con 12500 ciclos logramos ~100 milisegundos por ciclo
+
+    TA1CCR0 = 12500-1;
+
+    P1DIR &= ~BIT1;
+
+    //Inicializacion del ADC
+
+    ADC10CTL0=SREF_0|ADC10SHT_2|ADC10ON+AD|ADC10IE;
+    ADC10CTL1=INCH_1|SHS_0|ADC10DIV_0|ADC10SSEL_0|CONSEQ_0;
+    ADC10AE0 |= BIT1;
+}
+
+/* Solicitar una conversión cada 100 ms */
+#pragma vector = TIMER1_A0_VECTOR
+__interrupt void Timer_A1_ISR(void)
+{
+    if (!(ADC10CTL1 & ADC10BUSY))
+    {
+        ADC10CTL0 |= ENC | ADC10SC;
+    }
+}
+
+/* Guardar el resultado del ADC */
+#pragma vector = ADC10_VECTOR
+__interrupt void ADC10_ISR(void)
+{
+    lecturaADC = ADC10MEM;
+    nuevaLectura = 1;
+}
+
+
+
