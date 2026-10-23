@@ -1,0 +1,14 @@
+/*
+ * adc.h
+ *
+ *  Created on: 21/10/2026
+ *      Author: Julia y dania
+ */
+
+#ifndef ADC_H_
+#define ADC_H_
+extern volatile unsigned int lecturaADC;
+extern volatile unsigned char nuevaLectura;
+
+void adc_init(void);
+#endif /* ADC_H_ */
