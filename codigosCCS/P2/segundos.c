@@ -4,8 +4,8 @@
  *
  * Libreria para funciones de espera
  * antes de usar funcion espera() se debe iniciar init_espera al inicio del programa y elegir configuracion:
- * 0-> espera en el orden de 50 microsegundos (espera(1)=~50us)
- * x-> espera en milisegundos (espera(1)=~1ms)
+ * 0-> espera en el orden de 50 microsegundos (espera(0)=~50us)
+ * x-> espera en milisegundos (espera(2)=~1ms)
  * 1-> espera en segundos (espera(1)=~1s)
  *
  * por el momento solo es posible elegir un solo modo, volver a inicializar con init para cambiar a otro rango

@@ -11,10 +11,19 @@ unsigned int pasosmotor = 0;
 
 int main(void){
     WDTCTL = WDTPW | WDTHOLD;  // Detener watchdog
-    adc_init();
-    motor_init();
-                motor_derecha(512,8);
-                motor_izquierda(512,8);
+    lcd_init();
+    mensaje_grados();
+
+    int i;
+
+
+    for(i=100;i>=70;i-=5){
+        mensaje_numeros(i);
+        espera_init(1);
+        espera(1);
+    }
+
+    return 0;
 }
 /*
 int main(void){

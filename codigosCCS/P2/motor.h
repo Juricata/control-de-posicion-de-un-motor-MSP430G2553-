@@ -12,7 +12,7 @@
 
 #define M_DIR   P1DIR
 #define M_OUT   P1OUT
-#define M_MASK  (BIT1 | BIT2 | BIT3 | BIT4)
+#define M_MASK  (BIT0 | BIT1 | BIT2 | BIT3)
 
 //funciones
 void motor_init(void);

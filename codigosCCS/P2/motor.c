@@ -3,7 +3,7 @@
 
 //start pines del motor
 void motor_init(void) {
-    M_DIR |= M_MASK;   //P1.1 - P1.4 = salidas
+    M_DIR |= M_MASK;   //P1.0 - P1.3 = salidas
     M_OUT &= ~M_MASK;  //apaga las fases del motor (inicio)
 }
 //mvimiento derecha
@@ -11,13 +11,13 @@ void motor_derecha(unsigned int pasos, unsigned int vel) {
     int p;
     espera_init(2);
     for(p=0;p<pasos;p++){
-           P1OUT=0b0000110;
+           P1OUT=BIT0|BIT1;
            espera(vel);
-           P1OUT=0b0001100;
+           P1OUT=BIT1|BIT2;
            espera(vel);
-           P1OUT=0b0011000;
+           P1OUT=BIT2|BIT3;
            espera(vel);
-           P1OUT=0b0010010;
+           P1OUT=BIT3|BIT4;
            espera(vel);
     }
 }
@@ -26,13 +26,13 @@ void motor_izquierda(unsigned int pasos, unsigned int vel) {
     int p;
     espera_init(2);
     for(p=0;p<pasos;p++){
-              P1OUT=BIT1|BIT4;
-              espera(vel);
-              P1OUT=BIT4|BIT3;
+              P1OUT=BIT0|BIT3;
               espera(vel);
               P1OUT=BIT3|BIT2;
               espera(vel);
               P1OUT=BIT2|BIT1;
+              espera(vel);
+              P1OUT=BIT1|BIT0;
               espera(vel);
     }
 }

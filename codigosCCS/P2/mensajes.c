@@ -10,9 +10,16 @@
 #include "LCD.h"
 
 #define GUION 0x2D
+#define CERO 0x30
 #define UNO 0x31
 #define DOS 0x32
 #define TRES 0x33
+#define CUATRO 0x34
+#define CINCO 0x35
+#define SEIS 0x36
+#define SIETE 0x37
+#define OCHO 0x38
+#define NUEVE 0x39
 #define DOSPUNTOS 0x3A
 #define A 0x41
 #define B 0x42
@@ -37,9 +44,62 @@
 #define o 0x6F
 #define p 0x70
 #define r 0x72
+#define s 0x73
 #define t 0x74
 #define v 0x76
 #define x 0x78
+
+void mensaje_grados(void){
+    lcd_limpiar();
+    lcd_letra(g);
+    lcd_letra(r);
+    lcd_letra(a);
+    lcd_letra(d);
+    lcd_letra(o);
+    lcd_letra(s);
+    lcd_letra(DOSPUNTOS);
+    lcd_letra(0x20);
+}
+
+void mensaje_numeros(int numero){
+    int centenas = numero/100;
+    int decenas = (numero-centenas*100)/10;
+    int unidades= numero - centenas*100 - decenas*10;
+    centenas=convertir_numeros(centenas);
+    decenas=convertir_numeros(decenas);
+    unidades=convertir_numeros(unidades);
+
+    lcd_comando(0x89);
+    lcd_letra(centenas);
+    lcd_letra(decenas);
+    lcd_letra(unidades);
+}
+
+int convertir_numeros(int numero){
+    switch(numero){
+    case 0:
+        return CERO;
+    case 1:
+        return UNO;
+    case 2:
+        return DOS;
+    case 3:
+        return TRES;
+    case 4:
+        return CUATRO;
+    case 5:
+        return CINCO;
+    case 6:
+        return SEIS;
+    case 7:
+        return SIETE;
+    case 8:
+        return OCHO;
+    default:
+        return NUEVE;
+    }
+}
+
 void mensaje_encendido(void){
     lcd_limpiar();
     lcd_letra(0x20);
