@@ -2016,3 +2016,169 @@ gmake[1]: 'P2.out' is up to date.
 gmake[1]: Nothing to be done for 'secondary-outputs'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P2.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P2.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P2.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../mensajes.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Julia/Desktop/escuela/iteso/microcontroladores/Practica2/codigosCCS/P2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="mensajes.d_raw"  "../mensajes.c"
+"../mensajes.c", line 69: warning #225-D: function "convertir_numeros" declared implicitly
+"../mensajes.c", line 66: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../mensajes.c", line 67: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../mensajes.c", line 135: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 153: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 172: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 191: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 221: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 249: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 281: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 306: warning #225-D: function "espera_init" declared implicitly
+Finished building: "../mensajes.c"
+ 
+Building target: "P2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv8/ccs_base/msp430/include" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P2.out" "./LCD.obj" "./adc.obj" "./botones.obj" "./main.obj" "./mensajes.obj" "./motor.obj" "./segundos.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P2.out"
+ 
+Building files: "P2.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P2.hex"  "P2.out" 
+Translating to Intel format...
+   "P2.out" .text ==> .text
+   "P2.out" .cinit ==> .cinit
+   "P2.out" $fill000 ==> $fill000
+   "P2.out" TRAPINT ==> TRAPINT
+   "P2.out" PORT1 ==> PORT1
+   "P2.out" PORT2 ==> PORT2
+   "P2.out" ADC10 ==> ADC10
+   "P2.out" USCIAB0TX ==> USCIAB0TX
+   "P2.out" USCIAB0RX ==> USCIAB0RX
+   "P2.out" TIMER0_A1 ==> TIMER0_A1
+   "P2.out" TIMER0_A0 ==> TIMER0_A0
+   "P2.out" WDT ==> WDT
+   "P2.out" COMPARATORA ==> COMPARATORA
+   "P2.out" TIMER1_A1 ==> TIMER1_A1
+   "P2.out" TIMER1_A0 ==> TIMER1_A0
+   "P2.out" NMI ==> NMI
+   "P2.out" .reset ==> .reset
+Finished building: "P2.out"
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+gmake[1]: 'P2.out' is up to date.
+gmake[1]: Nothing to be done for 'secondary-outputs'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project P2 ****
+
+"C:\\ti\\ccsv8\\utils\\bin\\gmake" -k -j 4 all -O 
+ 
+Building file: "../LCD.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Julia/Desktop/escuela/iteso/microcontroladores/Practica2/codigosCCS/P2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="LCD.d_raw"  "../LCD.c"
+"../LCD.c", line 31: warning #225-D: function "espera_init" declared implicitly
+"../LCD.c", line 49: warning #225-D: function "espera_init" declared implicitly
+"../LCD.c", line 75: warning #225-D: function "espera_init" declared implicitly
+"../LCD.c", line 93: remark #1544-D: (ULP 13.1) Detected loop counting up. Recommend loops count down as detecting zeros is easier
+"../LCD.c", line 94: remark #2553-D: (ULP 14.1) Array index (involving "i") of type "int". Recommend using "unsigned int"
+Finished building: "../LCD.c"
+ 
+Building file: "../main.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Julia/Desktop/escuela/iteso/microcontroladores/Practica2/codigosCCS/P2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="main.d_raw"  "../main.c"
+"../main.c", line 20: warning #225-D: function "mensaje_grados" declared implicitly
+"../main.c", line 36: warning #225-D: function "mensaje_numeros" declared implicitly
+"../main.c", line 29: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../main.c", line 32: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+Finished building: "../main.c"
+ 
+Building file: "../mensajes.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Julia/Desktop/escuela/iteso/microcontroladores/Practica2/codigosCCS/P2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="mensajes.d_raw"  "../mensajes.c"
+"../mensajes.c", line 69: warning #225-D: function "convertir_numeros" declared implicitly
+"../mensajes.c", line 66: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../mensajes.c", line 67: remark #1530-D: (ULP 5.1) Detected divide operation(s). Recommend moving them to RAM during run time or not using as these are processing/power intensive
+"../mensajes.c", line 135: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 153: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 172: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 191: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 221: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 249: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 281: warning #225-D: function "espera_init" declared implicitly
+"../mensajes.c", line 306: warning #225-D: function "espera_init" declared implicitly
+Finished building: "../mensajes.c"
+ 
+Building file: "../segundos.c"
+Invoking: MSP430 Compiler
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --include_path="C:/ti/ccsv8/ccs_base/msp430/include" --include_path="C:/Users/Julia/Desktop/escuela/iteso/microcontroladores/Practica2/codigosCCS/P2" --include_path="C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number --preproc_with_compile --preproc_dependency="segundos.d_raw"  "../segundos.c"
+Finished building: "../segundos.c"
+ 
+Building target: "P2.out"
+Invoking: MSP430 Linker
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/cl430" -vmsp --use_hw_mpy=none --advice:power=all --define=__MSP430G2553__ -g --printf_support=minimal --diag_warning=225 --diag_wrap=off --display_error_number -z -m"P2.map" --heap_size=80 --stack_size=80 -i"C:/ti/ccsv8/ccs_base/msp430/include" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/lib" -i"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/include" --reread_libs --diag_wrap=off --display_error_number --warn_sections --xml_link_info="P2_linkInfo.xml" --use_hw_mpy=none --rom_model -o "P2.out" "./LCD.obj" "./adc.obj" "./botones.obj" "./main.obj" "./mensajes.obj" "./motor.obj" "./segundos.obj" "../lnk_msp430g2553.cmd"  -llibc.a 
+<Linking>
+remark #10372-D: (ULP 4.1) Detected uninitialized Port 3 in this project. Recommend initializing all unused ports to eliminate wasted current consumption on unused pins.
+Finished building target: "P2.out"
+ 
+Building files: "P2.out"
+Invoking: MSP430 Hex Utility
+"C:/ti/ccsv8/tools/compiler/ti-cgt-msp430_18.1.4.LTS/bin/hex430" --memwidth=8 --romwidth=8 --intel -o "P2.hex"  "P2.out" 
+Translating to Intel format...
+   "P2.out" .text ==> .text
+   "P2.out" .cinit ==> .cinit
+   "P2.out" $fill000 ==> $fill000
+   "P2.out" TRAPINT ==> TRAPINT
+   "P2.out" PORT1 ==> PORT1
+   "P2.out" PORT2 ==> PORT2
+   "P2.out" ADC10 ==> ADC10
+   "P2.out" USCIAB0TX ==> USCIAB0TX
+   "P2.out" USCIAB0RX ==> USCIAB0RX
+   "P2.out" TIMER0_A1 ==> TIMER0_A1
+   "P2.out" TIMER0_A0 ==> TIMER0_A0
+   "P2.out" WDT ==> WDT
+   "P2.out" COMPARATORA ==> COMPARATORA
+   "P2.out" TIMER1_A1 ==> TIMER1_A1
+   "P2.out" TIMER1_A0 ==> TIMER1_A0
+   "P2.out" NMI ==> NMI
+   "P2.out" .reset ==> .reset
+Finished building: "P2.out"
+ 
+
+**** Build Finished ****

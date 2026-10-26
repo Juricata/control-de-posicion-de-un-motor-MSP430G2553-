@@ -51,6 +51,7 @@
 
 void mensaje_grados(void){
     lcd_limpiar();
+    lcd_letra(0x20);
     lcd_letra(g);
     lcd_letra(r);
     lcd_letra(a);
@@ -61,7 +62,7 @@ void mensaje_grados(void){
     lcd_letra(0x20);
 }
 
-void mensaje_numeros(int numero){
+void mensaje_numeros(unsigned int numero){
     int centenas = numero/100;
     int decenas = (numero-centenas*100)/10;
     int unidades= numero - centenas*100 - decenas*10;
